@@ -55,7 +55,7 @@ Every version below was built on 23 Oct 2026. **1.5.0 is the first public releas
 **Added**
 - **Risk matrix** (likelihood × impact) with each red flag plotted.
 - **What it can do:** reads private data, reads outside content, sends data out, runs code, runs by itself, plus the **data-theft combo** warning.
-- Check against the **OWASP Agentic Skills Top 10** (v1.0, 2026). The author reviews the OWASP list weekly and updates the skill when it changes; this review is not automatic and is not part of the skill's files.
+- Check against the **OWASP Agentic Skills Top 10** (v1.0, 2026). The OWASP list is checked weekly. When OWASP changes it, the author reviews the change and approves it before the skill is updated; nothing updates automatically, and the weekly check is not part of the skill's files.
 
 **Changed**
 - Never says "safe": only **Low / Medium / High risk**.
