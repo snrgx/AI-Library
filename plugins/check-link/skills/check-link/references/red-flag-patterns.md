@@ -21,4 +21,19 @@ Use ordinary text search inside the folder you are reviewing. Choose your own se
 | Unpinned updates | "Always use the latest version", installers without a fixed version | AST07 |
 | Impersonation | Names that copy a famous brand or project, "official" claims from an unknown account | AST02, AST04 |
 
+## Websites and documents
+
+| Risk | What it looks like, in words |
+|---|---|
+| Look-alike address | A known brand's name inside an address that isn't the brand's, often with words like login, verify, account, bill or delivery; swapped letters or numbers; foreign look-alike letters; a bare number instead of a name |
+| Hidden destination | A short link, or an @ in the address, that hides where you really go |
+| Asking for secrets | A page or form that asks you to type a password, one-time code, card number or ID number |
+| Pressure | Threats of suspension, deadlines, "final notice" |
+| Bait | Prizes, gifts, free money |
+| Download push | Buttons or text urging you to download, install or "update" a file |
+| Active content | A document asking you to enable macros, content or editing |
+| AI-aimed instructions | Text addressed to AI assistants, often hidden, asking them to ignore rules, trust the page or pass on data |
+
+A page that only *mentions* passwords or scams (a bank's help page, a security article) is not asking for them.
+
 **Context matters:** documentation that explains an attack is not a threat. Flag only what would actually do the risky thing when the package is used, and treat an example command that the package tells the assistant to *run* as real.

@@ -6,6 +6,24 @@ Every version below was built on 23 Oct 2026. **1.5.0 is the first public releas
 
 ---
 
+## [1.6.0] · 2026-10-23 · Any link, not just AI skills
+
+**Added**
+- **Link types:** AI package, code project, website, document, short link, program, compressed file, media. Each kind is checked its own way and named at the top of the report.
+- **Websites and documents:** look-alike brand addresses (including Kuwaiti banks, telecoms and delivery services), no https, hidden destinations, pages that ask for passwords, codes, card or ID details, pressure, prize bait, download pushes, macros, and hidden instructions aimed at AI assistants. Scores and "what it can do" fit each kind.
+- **Before you open** checklist and a **safe reading prompt** for any AI assistant.
+- **Short links** are followed to the real address, shown as "short link → final address".
+- Programs, compressed files and **download links** (release downloads, "export=download", "dl=1"…) are never opened, so nothing is downloaded: only the address is checked, with a clear "this isn't an antivirus" caution.
+- **Short links ask first** before being followed, and warn if they led to a file the browser may have saved.
+
+**Changed**
+- New golden rule: on a page, only read. Never log in, type, click, enable macros or download.
+- Mentions are not requests: a bank's help page that mentions "civil ID" or a security article quoting scam phrases isn't flagged as asking for them.
+
+**Fixed**
+- The security policy pointed to a version log that didn't exist at the top of the library.
+
+
 ## [1.5.0] · 2026-10-23 · First public release
 
 **Added**
@@ -59,6 +77,7 @@ Every version below was built on 23 Oct 2026. **1.5.0 is the first public releas
 
 ## ملخص بالعربية
 
+- **1.6.0:** فحص أي رابط وليس المهارات فقط: المواقع والمستندات والروابط المختصرة والبرامج والملفات المضغوطة. كشف العناوين المقلّدة (ومنها البنوك وشركات الاتصالات والتوصيل في الكويت)، والصفحات التي تطلب كلمات المرور أو البطاقات، والتعليمات المخفية للذكاء الاصطناعي، مع قائمة «قبل الفتح» وأمر قراءة آمن.
 - **1.5.0 (أول إصدار عام):** الاسم الجديد Check Link ضمن مكتبة SNRGX للذكاء الاصطناعي، شرح كل تطابق في الفحص التلقائي (مؤكد أو إنذار كاذب)، وإصلاح الدليل حتى لا تعتبره أدوات الفحص خطراً.
 - **1.4.0:** «يعمل مع» 7 أدوات ذكاء اصطناعي مع التحويل لكل أداة، وقائمة «قبل التثبيت» مع أمر تثبيت آمن جاهز.
 - **1.3.0:** مصفوفة المخاطر، «ما الذي تستطيع فعله»، ومقارنة مع قائمة OWASP. لا نقول «آمن» أبداً.

@@ -12,7 +12,7 @@
     {
       "name": "check-link",
       "source": "./plugins/check-link",
-      "description": "Trust-check any AI skill, plugin or MCP server link before you install it. English and Arabic."
+      "description": "Trust-check any link before you install or open it: AI skills, plugins, MCP servers, websites and documents. English and Arabic."
     }
   ]
 }

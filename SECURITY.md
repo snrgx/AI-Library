@@ -13,4 +13,4 @@ Please don't post working attack examples publicly before we've had a chance to 
 
 ## Versions
 
-Only the latest version is supported. Changes are listed in [CHANGELOG.md](CHANGELOG.md).
+Only the latest version is supported. Each tool lists its changes in its own version log, for example [Check Link's CHANGELOG](plugins/check-link/CHANGELOG.md).

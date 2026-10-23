@@ -16,7 +16,7 @@ Built by **SNRGX**. Every tool is checked for safety before release.
 
 | Tool | What it does | Status |
 |---|---|---|
-| 🛡️ [**Check Link**](plugins/check-link) | Paste a link to any AI skill, plugin or MCP server and get a trust check before you install it: score out of 10, risk matrix, OWASP Agentic Skills Top 10, red flags and a safe-install prompt | [v1.5.0](plugins/check-link/CHANGELOG.md) |
+| 🛡️ [**Check Link**](plugins/check-link) | Paste any link and get a trust check before you install or open it. AI skills, plugins and MCP servers: score out of 10, risk matrix, OWASP Agentic Skills Top 10, red flags and a safe-install prompt. Websites, documents and short links: look-alike addresses, requests for passwords or cards, hidden AI instructions | [v1.6.0](plugins/check-link/CHANGELOG.md) |
 
 More tools are on the way.
 
@@ -41,7 +41,7 @@ Every tool in this library is reviewed with **Check Link** before release. Found
 
 مهارات وإضافات وأدوات MCP من **SNRGX** لروّاد الأعمال وصنّاع المحتوى والفرق، بالعربية والإنجليزية، بلغة بسيطة، وتُفحص كل أداة قبل نشرها.
 
-**الأدوات:** 🛡️ [**Check Link**](plugins/check-link): الصق رابط أي مهارة أو إضافة أو خادم MCP واحصل على فحص موثوقية قبل التثبيت.
+**الأدوات:** 🛡️ [**Check Link**](plugins/check-link): الصق أي رابط (مهارة أو إضافة أو خادم MCP، أو موقع إلكتروني، أو مستند) واحصل على فحص موثوقية قبل التثبيت أو الفتح.
 
 </div>
 

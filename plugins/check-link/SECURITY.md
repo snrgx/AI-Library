@@ -1,6 +1,6 @@
 # Security policy
 
-Check Link is a set of instructions (text only). It contains no scripts, hooks or MCP servers, and it never installs or runs what it checks.
+Check Link is a set of instructions (text only). It contains no scripts, hooks or MCP servers. It never installs, runs or downloads what it checks, and it never logs in, types into or submits anything on a page it reads.
 
 ## Reporting a problem
 
