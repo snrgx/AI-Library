@@ -31,7 +31,9 @@ AI skills, plugins and MCP servers are everywhere. Most are helpful. But a skill
 /plugin install check-link@snrgx
 ```
 
-**Claude app** (claude.ai, desktop): download this repo as a .zip, take the `plugins/check-link/skills/check-link` folder, zip it, then go to **Customize → Skills → + → Create skill → Upload a skill**.
+**Stay on a reviewed version:** the plugin commands follow the newest files. For a fixed version, download a release from [Releases](https://github.com/snrgx/AI-Library/releases) (for example `check-link-v1.5.0`) and use that copy, below.
+
+**Claude app** (claude.ai, desktop): download this repo (or a release) as a .zip, take the `plugins/check-link/skills/check-link` folder, zip it, then go to **Customize → Skills → + → Create skill → Upload a skill**.
 
 **Other tools that support Agent Skills:** add `skills/check-link/SKILL.md` the way your tool loads skills.
 

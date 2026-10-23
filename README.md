@@ -10,7 +10,7 @@
 
 Infusing AI into process engineering: visual, bilingual (EN/AR) skills, plugins and MCP tools for founders and creators, with a friendly UI/UX, so anyone can use them.
 
-Built by **SNRGX**. Every tool is checked for safety before release.
+Built by **SNRGX**. Every tool is checked with Check Link by its author before release. That is our own review, not an independent audit: outside reviews are welcome (see [SECURITY.md](SECURITY.md)).
 
 ## Tools
 
@@ -29,9 +29,11 @@ More tools are on the way.
 
 Every new tool added here appears in the same library. Each tool's own README explains other ways to install it, including the Claude app.
 
+**Stay on a reviewed version:** the commands above follow the newest files. To use a fixed version, download it from [Releases](https://github.com/snrgx/AI-Library/releases) (for example `check-link-v1.5.0`) and install that copy.
+
 ## Safety
 
-Every tool in this library is reviewed with **Check Link** before release. Found a problem? See [SECURITY.md](SECURITY.md).
+Every tool in this library is reviewed by its author with **Check Link** before release. This is not an independent audit and not a guarantee. Found a problem? See [SECURITY.md](SECURITY.md).
 
 ---
 

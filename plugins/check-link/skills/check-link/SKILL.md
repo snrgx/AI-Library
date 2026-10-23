@@ -40,7 +40,7 @@ If a listing page (for example a skills directory) points to a GitHub source for
 
 ## Step 1: Get the files
 
-- **GitHub link:** prefer the specific skill folder. With a shell: `git clone --depth 1 <url>` into a new empty folder, and record the commit SHA (`git rev-parse HEAD`). Without a shell, read `https://raw.githubusercontent.com/<owner>/<repo>/<branch>/<path>` and the GitHub API (`/repos/<owner>/<repo>`, `/git/trees/<branch>?recursive=1`).
+- **GitHub link:** prefer the specific skill folder. With a shell: `git clone --depth 1 <url>` into a new, empty, temporary folder **outside the user's project**, record the commit SHA (`git rev-parse HEAD`), never run anything from it, and delete the folder when the check is done. Without a shell, read `https://raw.githubusercontent.com/<owner>/<repo>/<branch>/<path>` and the GitHub API (`/repos/<owner>/<repo>`, `/git/trees/<branch>?recursive=1`).
 - **Marketplace or directory page:** find the source repo behind it and check that. If no source can be read, say so; that alone raises the risk.
 - **.zip file:** extract into an empty folder and read.
 

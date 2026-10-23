@@ -22,6 +22,11 @@ Every version below was built on 23 Oct 2026. **1.5.0 is the first public releas
 
 **Fixed**
 - The security policy pointed to a version log that didn't exist at the top of the library.
+- The version log no longer suggests the skill checks OWASP for updates by itself: that's a weekly review by the author.
+- Clearer wording: tools are checked by their author before release, not by an independent reviewer.
+
+**Added (install)**
+- How to stay on a reviewed version: install from a fixed release instead of the newest files.
 
 
 ## [1.5.0] · 2026-10-23 · First public release
@@ -49,7 +54,7 @@ Every version below was built on 23 Oct 2026. **1.5.0 is the first public releas
 **Added**
 - **Risk matrix** (likelihood × impact) with each red flag plotted.
 - **What it can do:** reads private data, reads outside content, sends data out, runs code, runs by itself, plus the **data-theft combo** warning.
-- Check against the **OWASP Agentic Skills Top 10** (v1.0, 2026), with a weekly check for list updates.
+- Check against the **OWASP Agentic Skills Top 10** (v1.0, 2026). The author reviews the OWASP list weekly and updates the skill when it changes; this review is not automatic and is not part of the skill's files.
 
 **Changed**
 - Never says "safe": only **Low / Medium / High risk**.
