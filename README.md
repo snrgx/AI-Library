@@ -16,7 +16,7 @@ Built by **SNRGX**. Every tool is checked for safety before release.
 
 | Tool | What it does | Status |
 |---|---|---|
-| 🛡️ [**Check Link**](plugins/check-link) | Paste a link to any AI skill, plugin or MCP server and get a trust check before you install it: score out of 10, risk matrix, OWASP Agentic Skills Top 10, red flags and a safe-install prompt | v1.0.0 |
+| 🛡️ [**Check Link**](plugins/check-link) | Paste a link to any AI skill, plugin or MCP server and get a trust check before you install it: score out of 10, risk matrix, OWASP Agentic Skills Top 10, red flags and a safe-install prompt | v1.5.0 |
 
 More tools are on the way.
 
