@@ -27,6 +27,7 @@ Every version below was built on 23 Oct 2026. **1.5.0 is the first public releas
 
 **Added (install)**
 - How to stay on a reviewed version: install from a fixed release instead of the newest files.
+- Install and safe-reading prompts are always in English with exact technical details (paths, full commit, commands), even in Arabic reports, so AI assistants follow them precisely.
 
 
 ## [1.5.0] · 2026-10-23 · First public release
