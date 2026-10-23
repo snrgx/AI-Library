@@ -1,0 +1,23 @@
+{
+  "name": "check-link",
+  "displayName": "Check Link",
+  "version": "1.0.0",
+  "description": "Paste a link to an AI skill, plugin or MCP server and get a trust check before you install it: score out of 10, risk matrix, OWASP Agentic Skills Top 10, red flags and a safe-install prompt. English and Arabic.",
+  "author": {
+    "name": "Hamidah Rahimi (SNRGX)",
+    "url": "https://github.com/snrgx"
+  },
+  "repository": "https://github.com/snrgx/AI-Library",
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "skills",
+    "plugins",
+    "mcp",
+    "owasp",
+    "supply-chain",
+    "arabic",
+    "trust"
+  ],
+  "homepage": "https://github.com/snrgx/AI-Library/tree/main/plugins/check-link"
+}
