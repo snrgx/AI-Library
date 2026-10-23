@@ -1,7 +1,7 @@
 {
   "name": "check-link",
   "displayName": "Check Link",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Paste a link to an AI skill, plugin or MCP server and get a trust check before you install it: score out of 10, risk matrix, OWASP Agentic Skills Top 10, red flags and a safe-install prompt. English and Arabic.",
   "author": {
     "name": "Hamidah Rahimi (SNRGX)",

