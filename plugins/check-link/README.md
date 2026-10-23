@@ -47,6 +47,10 @@ Or just ask:
 
 > افحص هذه المهارة قبل أن أثبّتها: https://github.com/…
 
+## Version
+
+Current version: **1.5.0**. See what changed in each version: [CHANGELOG.md](CHANGELOG.md) · [سجل الإصدارات](CHANGELOG.md#ملخص-بالعربية)
+
 ## Important
 
 This is an AI-assisted review, **not a guarantee**. It catches common risks and explains them in plain language, but it can miss things. Re-check after every update. OWASP does not endorse this project; it checks *against* the OWASP list.
