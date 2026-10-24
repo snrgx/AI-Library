@@ -2,81 +2,86 @@
 
 All notable changes to Check Link. Format based on [Keep a Changelog](https://keepachangelog.com/). Versions: **major.minor.patch** (new features raise the middle number, fixes raise the last).
 
-Every version below was built on 23 Oct 2026. **1.5.0 is the first public release.**
+**Check Link has two parts. Only the first is in this repository.**
+- **Skill** (this folder): text instructions your AI follows. It writes the report as text: score, risk level, red flags, checklist and prompt.
+- **Page**: a separate visual tool by SNRGX (a Claude artifact) where you paste a link and see the report with charts and buttons. It is **not included** in this plugin.
+
+Each entry below says which part it applies to. Every version was built on 23–24 Oct 2026. **1.5.0 is the first public release.**
 
 ---
 
-## [1.6.0] · 2026-10-23 · Any link, not just AI skills
+## [1.6.0] · 2026-10-24 · Any link, not just AI skills
 
 **Added**
-- **Link types:** AI package, code project, website, document, short link, program, compressed file, media. Each kind is checked its own way and named at the top of the report.
-- **Websites and documents:** look-alike brand addresses (including Kuwaiti banks, telecoms and delivery services), no https, hidden destinations, pages that ask for passwords, codes, card or ID details, pressure, prize bait, download pushes, macros, and hidden instructions aimed at AI assistants. Scores and "what it can do" fit each kind.
-- **Before you open** checklist and a **safe reading prompt** for any AI assistant.
-- **Short links** are followed to the real address, shown as "short link → final address".
-- Programs, compressed files and **download links** (release downloads, "export=download", "dl=1"…) are never opened, so nothing is downloaded: only the address is checked, with a clear "this isn't an antivirus" caution.
-- **Short links ask first** before being followed, and warn if they led to a file the browser may have saved.
+- Skill and page: **link types** (AI package, code project, website, document, short link, download link, program, compressed file, media). Each kind is checked its own way and named at the top of the report.
+- Skill and page: **websites and documents**: look-alike brand addresses (including Kuwaiti banks, telecoms and delivery services), no https, hidden destinations, pages that ask for passwords, codes, card or ID details, pressure, prize bait, download pushes, macros, and hidden instructions aimed at AI assistants. Scores and "what it can do" fit each kind.
+- Skill and page: a **Before you open** checklist and a **safe reading prompt** for any AI assistant.
+- Skill and page: programs, compressed files and **download links** (release downloads, "export=download", "dl=1"…) are never opened, so nothing is downloaded: only the address is checked, with a clear "this isn't an antivirus" caution.
+- Skill and page: **short links ask first** before being followed ("short link → final address"), and warn if they led to a file the browser may have saved.
+- Skill and page: in Arabic reports, red flags are written in Arabic and each English quote gets a line saying what it means.
+- Page only: a button to translate a finished report into the other language without running the check again.
+- Page only: reads PDFs through Google's document viewer when the browser shows no text, and says so in the report.
 
 **Changed**
-- New golden rule: on a page, only read. Never log in, type, click, enable macros or download.
-- Scores use the full scale. Only a perfect 10 is capped, at 9.5 (before: everything was capped at 9, which pulled good scores down).
-- Mentions are not requests: a bank's help page that mentions "civil ID" or a security article quoting scam phrases isn't flagged as asking for them.
+- Skill and page: new golden rule: on a page, only read. Never log in, type, click, enable macros or download.
+- Skill and page: scores use the full scale. Only a perfect 10 is capped, at 9.5 (before, everything was capped at 9, which pulled good scores down).
+- Skill and page: mentions are not requests. A bank's help page that mentions "civil ID", or a security article quoting scam phrases, isn't flagged as asking for them.
+- Skill and page: install and safe-reading prompts are always in English with exact technical details (paths, full commit, commands), even in Arabic reports, so AI assistants follow them precisely.
+- Skill: clones go into a temporary folder outside your project, are never run, and are deleted afterwards.
+- Docs: how to stay on a reviewed version (install from a fixed release instead of the newest files).
 
 **Fixed**
-- The security policy pointed to a version log that didn't exist at the top of the library.
-- The version log no longer suggests the skill checks OWASP for updates by itself: that's a weekly review by the author.
-- Clearer wording: tools are checked by their author before release, not by an independent reviewer.
-
-**Added (install)**
-- How to stay on a reviewed version: install from a fixed release instead of the newest files.
-- Install and safe-reading prompts are always in English with exact technical details (paths, full commit, commands), even in Arabic reports, so AI assistants follow them precisely.
-
+- Docs: the security policy pointed to a version log that didn't exist at the top of the library.
+- Docs: this log now says which part (skill or page) each change belongs to. Earlier entries described page features as if they came with the plugin.
+- Docs: the weekly OWASP check is a review by the author, approved before any update; it isn't part of the skill's files.
+- Docs: tools are checked by their author before release; that is not an independent audit.
 
 ## [1.5.0] · 2026-10-23 · First public release
 
 **Added**
 - Published as **Check Link** in the **SNRGX AI Library** (github.com/snrgx/AI-Library), with the SNRGX logo, a bilingual README, a security policy and the MIT license.
-- Every automatic-scan match is reviewed and labelled **confirmed** or **false alarm**, with a one-line reason.
+- Skill and page: every automatic-scan match is reviewed and labelled **confirmed** or **false alarm**, with a one-line reason.
 
 **Changed**
 - Renamed from "Skill Trust Check" to **Check Link**.
-- The red warning bar only appears for critical matches the review didn't explain.
+- Page only: the red warning bar only appears for critical matches the review didn't explain.
 
 **Fixed**
-- The reference guide quoted attack examples, so scanners (ours and the Claude directory's) mistook the guide for the threat. Risks are now described in plain words only; all 7 directory checks pass.
+- Skill: the reference guide quoted attack examples, so scanners (ours and the Claude directory's) mistook the guide for the threat. Risks are now described in plain words only; all 7 directory checks pass.
 
 ## [1.4.0] · 2026-10-23 · Works with other AI tools, safe install
 
 **Added**
-- **Works with:** Claude, Claude Code, ChatGPT, OpenAI Codex, Gemini CLI, Cursor and GitHub Copilot, each marked works / needs adapting / no, with the format files found.
-- **Make the version for your tool:** converts the skill to another tool's format, leaving out risky parts.
-- **Before you install** checklist that turns into a ready **safe-install prompt** (show the command and wait, no `-y`, no `-g`, pinned versions, no scripts, hooks or MCP servers without asking, list added files).
+- Skill and page: **Works with**: Claude, Claude Code, ChatGPT, OpenAI Codex, Gemini CLI, Cursor and GitHub Copilot, each marked works / needs adapting / no.
+- Skill: on request, rewrites a checked skill in another tool's format, leaving out risky parts. Page: the same as a "Make the version for your tool" button with a .zip download.
+- Skill and page: a **Before you install** checklist and a ready **safe-install prompt** (show the command and wait, no `-y`, no `-g`, pinned versions, no scripts, hooks or MCP servers without asking, list added files). Page only: tick the items you want and the prompt updates.
 
 ## [1.3.0] · 2026-10-23 · Risk profile and OWASP
 
 **Added**
-- **Risk matrix** (likelihood × impact) with each red flag plotted.
-- **What it can do:** reads private data, reads outside content, sends data out, runs code, runs by itself, plus the **data-theft combo** warning.
-- Check against the **OWASP Agentic Skills Top 10** (v1.0, 2026). The OWASP list is checked weekly. When OWASP changes it, the author reviews the change and approves it before the skill is updated; nothing updates automatically, and the weekly check is not part of the skill's files.
+- Skill and page: likelihood × impact rating for each red flag and overall. Page only: drawn as a **risk matrix** with each flag plotted.
+- Skill and page: **what it can do** (reads private data, reads outside content, sends data out, runs code, runs by itself), plus the **data-theft combo** warning.
+- Skill and page: check against the **OWASP Agentic Skills Top 10** (v1.0, 2026).
 
 **Changed**
-- Never says "safe": only **Low / Medium / High risk**.
+- Skill and page: never says "safe": only **Low / Medium / High risk**.
 
-## [1.2.0] · 2026-10-23 · Visual report and bilingual
-
-**Added**
-- **Score out of 10** (highest 9: nothing is risk-free) with stars and a colour scale (green, yellow, orange, red).
-- Red-flag counter, details by criteria, black-and-white design with colour only for risk.
-- **English and Arabic**, with a full right-to-left layout.
-
-## [1.1.0] · 2026-10-23 · Visual tool
+## [1.2.0] · 2026-10-23 · Scores and bilingual
 
 **Added**
-- One-page tool: paste a link or upload a .zip, watch the steps, read the report, approve and download.
+- Skill and page: **score out of 10** with stars and a colour scale (green, yellow, orange, red).
+- Skill and page: **English and Arabic**.
+- Page only: red-flag counter, details by criteria, black-and-white design with colour only for risk, full right-to-left layout.
+
+## [1.1.0] · 2026-10-23 · Visual page
+
+**Added**
+- Page only: one-page tool. Paste a link or upload a .zip, watch the steps, read the report, approve and download.
 
 ## [1.0.0] · 2026-10-23 · First skill
 
 **Added**
-- Read-only review of AI skills, plugins, MCP servers and marketplace links, with a plain-language report and a risk verdict.
+- Skill: read-only review of AI skills, plugins, MCP servers and marketplace links, with a plain-language report and a risk verdict.
 
 ---
 
@@ -84,12 +89,14 @@ Every version below was built on 23 Oct 2026. **1.5.0 is the first public releas
 
 ## ملخص بالعربية
 
-- **1.6.0:** فحص أي رابط وليس المهارات فقط: المواقع والمستندات والروابط المختصرة والبرامج والملفات المضغوطة. كشف العناوين المقلّدة (ومنها البنوك وشركات الاتصالات والتوصيل في الكويت)، والصفحات التي تطلب كلمات المرور أو البطاقات، والتعليمات المخفية للذكاء الاصطناعي، مع قائمة «قبل الفتح» وأمر قراءة آمن.
-- **1.5.0 (أول إصدار عام):** الاسم الجديد Check Link ضمن مكتبة SNRGX للذكاء الاصطناعي، شرح كل تطابق في الفحص التلقائي (مؤكد أو إنذار كاذب)، وإصلاح الدليل حتى لا تعتبره أدوات الفحص خطراً.
-- **1.4.0:** «يعمل مع» 7 أدوات ذكاء اصطناعي مع التحويل لكل أداة، وقائمة «قبل التثبيت» مع أمر تثبيت آمن جاهز.
-- **1.3.0:** مصفوفة المخاطر، «ما الذي تستطيع فعله»، ومقارنة مع قائمة OWASP. لا نقول «آمن» أبداً.
-- **1.2.0:** تقييم من 10 مع نجوم، وتصميم مرئي، والعربية والإنجليزية.
-- **1.1.0:** صفحة واحدة: الصق الرابط واقرأ التقرير وقرّر.
-- **1.0.0:** أول مهارة: مراجعة للقراءة فقط مع تقرير بلغة بسيطة.
+لأداة Check Link جزءان، والأول فقط موجود في هذا المستودع: **المهارة** (تعليمات نصية تكتب التقرير نصاً)، و**الصفحة** (أداة مرئية منفصلة من SNRGX فيها الرسوم والأزرار، وليست ضمن هذه الإضافة).
+
+- **1.6.0:** المهارة والصفحة: فحص أي رابط وليس المهارات فقط (المواقع والمستندات والروابط المختصرة وروابط التحميل والبرامج والملفات المضغوطة)، وكشف العناوين المقلّدة والصفحات التي تطلب كلمات المرور أو البطاقات والتعليمات المخفية للذكاء الاصطناعي، مع قائمة «قبل الفتح» وأمر قراءة آمن، وعلامات خطر بالعربية. الصفحة فقط: زر ترجمة التقرير.
+- **1.5.0 (أول إصدار عام):** الاسم الجديد Check Link ضمن مكتبة SNRGX، وشرح كل تطابق في الفحص التلقائي (مؤكد أو إنذار كاذب).
+- **1.4.0:** المهارة والصفحة: «يعمل مع» 7 أدوات ذكاء اصطناعي، وقائمة «قبل التثبيت» مع أمر تثبيت آمن. الصفحة فقط: زر التحويل وتحديد عناصر القائمة.
+- **1.3.0:** المهارة والصفحة: تقييم الاحتمال والأثر، «ما الذي تستطيع فعله»، ومقارنة مع قائمة OWASP. الصفحة فقط: رسم مصفوفة المخاطر.
+- **1.2.0:** المهارة والصفحة: تقييم من 10 مع نجوم، والعربية والإنجليزية. الصفحة فقط: التصميم المرئي.
+- **1.1.0:** الصفحة فقط: أداة من صفحة واحدة.
+- **1.0.0:** المهارة: أول مراجعة للقراءة فقط مع تقرير بلغة بسيطة.
 
 </div>

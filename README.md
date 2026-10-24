@@ -16,7 +16,7 @@ Built by **SNRGX**. Every tool is checked with Check Link by its author before r
 
 | Tool | What it does | Status |
 |---|---|---|
-| 🛡️ [**Check Link**](plugins/check-link) | Paste any link and get a trust check before you install or open it. AI skills, plugins and MCP servers: score out of 10, risk matrix, OWASP Agentic Skills Top 10, red flags and a safe-install prompt. Websites, documents and short links: look-alike addresses, requests for passwords or cards, hidden AI instructions | [v1.6.0](plugins/check-link/CHANGELOG.md) |
+| 🛡️ [**Check Link**](plugins/check-link) | Paste any link and get a trust check before you install or open it. AI skills, plugins and MCP servers: score out of 10, likelihood × impact risk rating, OWASP Agentic Skills Top 10, red flags and a safe-install prompt. Websites, documents and short links: look-alike addresses, requests for passwords or cards, hidden AI instructions | [v1.6.0](plugins/check-link/CHANGELOG.md) |
 
 More tools are on the way.
 

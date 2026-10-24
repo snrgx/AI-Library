@@ -16,12 +16,14 @@ AI skills, plugins and MCP servers are everywhere. Most are helpful. But a skill
 
 - **Score out of 10** with stars (never a perfect 10: nothing is risk-free) and a **Low / Medium / High risk** level
 - **Red flags** with the exact file and line
-- **Risk matrix** (likelihood × impact) and **what it can do** (reads private data, sends data out, runs code…)
+- **Risk rating** (likelihood × impact, per red flag and overall) and **what it can do** (reads private data, sends data out, runs code…)
 - Checked against the **OWASP Agentic Skills Top 10** (OWASP: Open Worldwide Application Security Project)
 - **Works with:** Claude, Claude Code, ChatGPT, OpenAI Codex, Gemini CLI, Cursor, GitHub Copilot
 - **Before you install:** a checklist plus a ready **safe-install prompt** for your AI assistant (no `-y`, no `-g`, pinned versions, no scripts or hooks without asking)
 - **Any other link (new in 1.6):** websites, documents (PDF, Word, Excel), short links and download links. It spots look-alike brand addresses (including Kuwaiti banks and delivery services), pages that ask for passwords, codes or card details, pressure and prize bait, download pushes, macros, and hidden instructions aimed at your AI. You get a **Before you open** checklist and a **safe reading prompt**. Programs, compressed files and download links are never opened, so nothing is downloaded: only their address is checked. Short links are followed only after you agree.
 - English and Arabic
+
+**What you get with this plugin:** the skill. Your AI writes the report as text in the chat (score, stars, risk level, red flags, checklist, prompt). The visual page you may have seen in SNRGX posts, with the risk matrix drawing and buttons, is a separate tool and isn't included here.
 
 ## Install
 
@@ -77,12 +79,14 @@ Found a problem? See [SECURITY.md](SECURITY.md).
 
 - **تقييم من 10** مع نجوم (لا يوجد تقييم كامل 10، فلا شيء خالٍ من المخاطر) ومستوى **مخاطر منخفضة / متوسطة / عالية**
 - **علامات الخطر** مع اسم الملف والسطر بالضبط
-- **مصفوفة المخاطر** (الاحتمال × الأثر) و**ما الذي تستطيع فعله** (قراءة بياناتك الخاصة، إرسال بيانات للخارج، تشغيل أكواد…)
+- **تقييم المخاطر** (الاحتمال × الأثر لكل علامة خطر وللحزمة كلها) و**ما الذي تستطيع فعله** (قراءة بياناتك الخاصة، إرسال بيانات للخارج، تشغيل أكواد…)
 - مقارنة مع قائمة **OWASP Agentic Skills Top 10** (مشروع أمن التطبيقات المفتوح عالمياً)
 - **يعمل مع:** Claude وClaude Code وChatGPT وOpenAI Codex وGemini CLI وCursor وGitHub Copilot
 - **قبل التثبيت:** قائمة تحقق وأمر **تثبيت آمن** جاهز لمساعدك الذكي (بدون ‎-y‎ وبدون ‎-g‎، بإصدارات ثابتة، ولا سكربتات أو خطافات دون استئذان)
 - **أي رابط آخر (جديد في 1.6):** المواقع والمستندات (PDF وWord وExcel) والروابط المختصرة وروابط التحميل. يكشف العناوين التي تقلّد العلامات المعروفة (ومنها البنوك وشركات التوصيل في الكويت)، والصفحات التي تطلب كلمات المرور أو رموز التحقق أو بيانات البطاقة، والضغط والجوائز الوهمية، ودفعك للتحميل، ووحدات الماكرو، والتعليمات المخفية الموجهة لمساعدك الذكي. وتحصل على قائمة **قبل الفتح** و**أمر قراءة آمن**. البرامج والملفات المضغوطة وروابط التحميل لا يتم فتحها أبداً، فلا يُحمَّل أي شيء: يُفحص عنوانها فقط. والروابط المختصرة لا تتم متابعتها إلا بموافقتك.
 - بالعربية والإنجليزية
+
+**ما تحصل عليه مع هذه الإضافة:** المهارة فقط. يكتب مساعدك الذكي التقرير نصاً في المحادثة (التقييم والنجوم ومستوى المخاطر وعلامات الخطر والقائمة والأمر الجاهز). أما الصفحة المرئية التي قد تراها في منشورات SNRGX، مع رسم مصفوفة المخاطر والأزرار، فهي أداة منفصلة وليست ضمن هذه الإضافة.
 
 ## طريقة الاستخدام
 
