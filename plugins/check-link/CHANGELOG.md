@@ -18,6 +18,7 @@ Every version below was built on 23 Oct 2026. **1.5.0 is the first public releas
 
 **Changed**
 - New golden rule: on a page, only read. Never log in, type, click, enable macros or download.
+- Scores use the full scale. Only a perfect 10 is capped, at 9.5 (before: everything was capped at 9, which pulled good scores down).
 - Mentions are not requests: a bank's help page that mentions "civil ID" or a security article quoting scam phrases isn't flagged as asking for them.
 
 **Fixed**
