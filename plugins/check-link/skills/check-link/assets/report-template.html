@@ -439,8 +439,8 @@ en:{
   pWhere:["Open a NEW conversation in the AI tool you'll install with (for example Claude Code or the Claude app).","Paste this prompt FIRST, before you ask it to install anything. It sets the rules.","Then ask it to install. It will show each command and wait for your yes."],
   noInstall:"This page never installs anything on your computer. You stay in control: copy the install prompt and give it to your AI assistant, which asks before every step.",
   rules:{
-    confirm:["Show the full install command and wait for my approval. Never use -y.","Before running any command, show me the full install command and wait for my approval. Never use the -y (auto-yes) option."],
-    project:["Install inside one project, not for the whole computer (no -g).","Install the skill inside this project only, not for the whole computer. Do not use the -g (global) option."],
+    confirm:["Show me every install step and wait for my yes. Nothing is approved automatically.","Before running any command, show me the full install command and wait for my approval. Never use the -y (auto-yes) option."],
+    project:["Install it in this project only, not for the whole computer.","Install the skill inside this project only, not for the whole computer. Do not use the -g (global) option."],
     pin:["Pin exact versions so nothing changes without you knowing.",sha=>`Pin exact versions so nothing changes without my knowledge: ${sha?`install from commit ${sha}, not the latest version, and `:""}use a fixed version of any installer tool (for example npx skills@<version>, never just "latest").`],
     folder:[f=>`Install only the skill folder (${f}), not the whole repo.`,f=>`Install only the folder "${f}", not the whole repository.`],
     noauto:["No scripts, hooks or MCP servers without asking.","Do not run setup or postinstall scripts, do not enable hooks, and do not start or connect any MCP server without asking me first."],
@@ -564,8 +564,8 @@ ar:{
   pWhere:["افتح محادثة جديدة في أداة الذكاء الاصطناعي التي ستثبّت بها المهارة (مثل Claude Code أو تطبيق Claude).","الصق هذا الأمر أولاً، قبل أن تطلب منه تثبيت أي شيء، فهو يحدد القواعد.","بعدها اطلب منه التثبيت، وسيعرض عليك كل أمر وينتظر موافقتك."],
   noInstall:"هذه الصفحة لا تثبّت أي شيء على جهازك. القرار بيدك: انسخ أمر التثبيت وأعطه لمساعد الذكاء الاصطناعي، وهو سيستأذنك قبل كل خطوة.",
   rules:{
-    confirm:["اعرض أمر التثبيت كاملاً وانتظر موافقتي، ولا تستخدم -y.","قبل تشغيل أي أمر، اعرض عليّ أمر التثبيت كاملاً وانتظر موافقتي، ولا تستخدم الخيار -y (الموافقة التلقائية)."],
-    project:["ثبّت داخل مشروع محدد وليس لكل الجهاز (بدون -g).","ثبّت المهارة داخل هذا المشروع فقط وليس لكل الجهاز، ولا تستخدم الخيار -g (التثبيت العام)."],
+    confirm:["اعرض عليّ كل خطوة تثبيت وانتظر موافقتي، دون أي موافقة تلقائية.","قبل تشغيل أي أمر، اعرض عليّ أمر التثبيت كاملاً وانتظر موافقتي، ولا تستخدم الخيار -y (الموافقة التلقائية)."],
+    project:["ثبّتها في هذا المشروع فقط، وليس لكل الجهاز.","ثبّت المهارة داخل هذا المشروع فقط وليس لكل الجهاز، ولا تستخدم الخيار -g (التثبيت العام)."],
     pin:["حدّد أرقام إصدارات ثابتة حتى لا يتغير شيء دون علمك.",sha=>`حدّد أرقام إصدارات ثابتة حتى لا يتغير شيء دون علمي: ${sha?`ثبّت من النسخة ${sha} وليس من آخر إصدار، و`:""}استخدم إصداراً ثابتاً لأي أداة تثبيت (مثل npx skills@<version> وليس latest).`],
     folder:[f=>`ثبّت مجلد المهارة فقط (${f}) وليس المستودع كاملاً.`,f=>`ثبّت المجلد "${f}" فقط وليس المستودع كاملاً.`],
     noauto:["لا سكربتات ولا خطافات ولا خوادم MCP دون استئذان.","لا تشغّل سكربتات الإعداد أو ما بعد التثبيت، ولا تفعّل الخطافات (hooks)، ولا تشغّل أو تربط أي خادم MCP قبل أن تستأذنني."],

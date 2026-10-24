@@ -141,19 +141,19 @@ OWASP: AST01 OK · AST02 Watch · …
 1. <CRITICAL/WARNING> · <ASTxx> · <file:line>: <what and why it matters>
    > <short exact quote>
 
-## Before you install (checklist)
+## Before you install (checklist: plain words; the person picks the items they want)
 From this check:
 - [ ] <specific action for this package>
 Safe install rules:
-- [ ] Show me the full install command and wait for my approval. Never use -y.
-- [ ] Install inside this project only, not for the whole computer (no -g).
+- [ ] Show me every install step and wait for my yes. Nothing is approved automatically.
+- [ ] Install it in this project only, not for the whole computer.
 - [ ] Pin exact versions: install from commit <sha>; use a fixed installer version (e.g. npx skills@<version>).
 - [ ] Install only the skill folder <path>, not the whole repo.
 - [ ] No setup/postinstall scripts, hooks or MCP servers without asking me first.
 - [ ] After installing, list every file added and where.
 
 ## Install prompt (copy into a NEW conversation with your AI assistant, BEFORE asking it to install)
-<the checklist rewritten as instructions to the assistant, with skill name, source, folder path, full commit SHA and risk result, ending with: "Before you run anything, repeat these rules back to me and wait for me to say go.">
+<the checklist rewritten as instructions to the assistant, in exact technical terms (for example "Never use the -y (auto-yes) option", "Do not use the -g (global) option"), with skill name, source, folder path, full commit SHA and risk result, ending with: "Before you run anything, repeat these rules back to me and wait for me to say go.">
 **Always write this prompt in English**, even when the rest of the report is in Arabic, and keep every technical detail exact (paths, repo, commit SHA, command names and flags). AI assistants follow precise English instructions most reliably. In an Arabic report, add one Arabic line before it saying it is in English on purpose and can be pasted as is.
 
 ## Good signs
