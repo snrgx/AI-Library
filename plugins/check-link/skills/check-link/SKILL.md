@@ -168,7 +168,7 @@ Quote suspicious lines exactly (short excerpts) so the reader can verify. In an 
 
 Check Link's main output is a **visual report**: score and stars, red-flag counter, risk matrix, what it can do, OWASP tiles, works with, red flags, the checklist and the ready prompt, in English or Arabic. The design is in `assets/report-template.html`. Always make it when you can run code or write files; the text report above is the fallback.
 
-1. Put the results in one JSON object (format below). Use the same facts as your text report.
+1. Put the results in one JSON object (format below). Use the same facts as your text report. **Always include the report in both English and Arabic** (`reports.en` and `reports.ar`): the visual report has an English/العربية switch. The two versions must match exactly in every fact, score, level and quote; only the human-readable texts differ. `lang` is the language the person used, and the report opens in it.
 2. **Don't retype the template.** With a short script: read `assets/report-template.html`, replace the text `__REPORT_JSON__` with the JSON, and **escape every `</` as `<\/`** so the data can't break out of its block. Save the result as `check-link-report-<name>.html`.
    - **Claude app:** save it to your outputs folder and share the file with the person (it opens as a visual page).
    - **Claude Code:** save it in the current folder (never inside the package you checked) and tell the person the path and to open it in their browser.
@@ -176,7 +176,7 @@ Check Link's main output is a **visual report**: score and stars, red-flag count
 
 The template is a static page: it only draws the report. It makes no network requests and installs or runs nothing. Don't add scripts, links to load or anything else to it.
 
-**JSON format** (keys in English; human-readable texts in the report language; the `ai` texts always in English):
+**JSON format** (keys in English; inside `reports.en` texts are in English, inside `reports.ar` in simple Modern Standard Arabic; the `ai` texts are always in English in both):
 ```
 {
   "lang": "en" | "ar",
@@ -185,9 +185,14 @@ The template is a static page: it only draws the report. It makes no network req
   "checked_at": "<ISO date-time>",
   "meta": repo: {"owner","repo","branch","sha","stars","pushed","license","ownerType","url"} · .zip: {"repo":"<file name>","zip":true} · other kinds: {"host","finalUrl","https":true|false,"redirectFrom","title"},
   "scope": "<skill folder path, or empty>",
-  "files": [{"path","read":true|false,"cut":true|false,"reason":"<why not read, in the report language>"}],
-  "scan": [{"sev":"critical"|"warning","name":"<what the match is>","file","line","text":"<the matched line>","doc":true|false,"ctx":"code"|"text"|"block"|"page"|"address"}],
-  "report": {
+  "files": [{"path","read":true|false,"cut":true|false,"reason":{"en":"<why not read>","ar":"<السبب>"}}],
+  "scan": [{"sev":"critical"|"warning","name":{"en":"<what the match is>","ar":"<…>"},"file","line","text":"<the matched line>","doc":true|false,"ctx":"code"|"text"|"block"|"page"|"address"}],
+  "reports": { "en": <report>, "ar": <report> }
+}
+```
+where each `<report>` is:
+```
+  {
     "verdict": "green"|"yellow"|"red", "headline", "what_it_is", "kind", "scale": 10,
     "scores": {"source","content","code","permissions","quality"} each {"score": 0–9.5, "why"}  (null for program, archive, download, short, media),
     "risk": {"likelihood": 1–5, "impact": 1–5},
@@ -200,7 +205,6 @@ The template is a static page: it only draws the report. It makes no network req
     "before_install": [{"step":"<for the person>","ai":"<English instruction for the AI assistant>"}]  (AI packages; other kinds use "before_open"),
     "couldnt_check": ["…"]
   }
-}
 ```
 Number `scan` matches in the order you list them; `scan_review.n` points to them. The template adds the standard safe-install or safe-opening rules and builds the English prompt itself.
 
