@@ -164,6 +164,46 @@ _AI-assisted review by Check Link (Hamidah Rahimi · SNRGX). Not a guarantee. Re
 
 Quote suspicious lines exactly (short excerpts) so the reader can verify. In an Arabic report, write every red flag, explanation and checklist step in Arabic; keep the quote exactly as in the source and add one Arabic line under it saying what it means. Only the install prompt stays in English. Always record the commit SHA you reviewed.
 
+## Step 6: Show the visual report
+
+Check Link's main output is a **visual report**: score and stars, red-flag counter, risk matrix, what it can do, OWASP tiles, works with, red flags, the checklist and the ready prompt, in English or Arabic. The design is in `assets/report-template.html`. Always make it when you can run code or write files; the text report above is the fallback.
+
+1. Put the results in one JSON object (format below). Use the same facts as your text report.
+2. **Don't retype the template.** With a short script: read `assets/report-template.html`, replace the text `__REPORT_JSON__` with the JSON, and **escape every `</` as `<\/`** so the data can't break out of its block. Save the result as `check-link-report-<name>.html`.
+   - **Claude app:** save it to your outputs folder and share the file with the person (it opens as a visual page).
+   - **Claude Code:** save it in the current folder (never inside the package you checked) and tell the person the path and to open it in their browser.
+3. In the chat, give a short summary only: verdict, score, number of red flags, the top 3 flags, and say the full visual report is attached. If you couldn't make the file, give the full text report from Step 5.
+
+The template is a static page: it only draws the report. It makes no network requests and installs or runs nothing. Don't add scripts, links to load or anything else to it.
+
+**JSON format** (keys in English; human-readable texts in the report language; the `ai` texts always in English):
+```
+{
+  "lang": "en" | "ar",
+  "kind": "repo" | "website" | "document" | "short" | "download" | "program" | "archive" | "media",
+  "source": "<the link as given>",
+  "checked_at": "<ISO date-time>",
+  "meta": repo: {"owner","repo","branch","sha","stars","pushed","license","ownerType","url"} · .zip: {"repo":"<file name>","zip":true} · other kinds: {"host","finalUrl","https":true|false,"redirectFrom","title"},
+  "scope": "<skill folder path, or empty>",
+  "files": [{"path","read":true|false,"cut":true|false,"reason":"<why not read, in the report language>"}],
+  "scan": [{"sev":"critical"|"warning","name":"<what the match is>","file","line","text":"<the matched line>","doc":true|false,"ctx":"code"|"text"|"block"|"page"|"address"}],
+  "report": {
+    "verdict": "green"|"yellow"|"red", "headline", "what_it_is", "kind", "scale": 10,
+    "scores": {"source","content","code","permissions","quality"} each {"score": 0–9.5, "why"}  (null for program, archive, download, short, media),
+    "risk": {"likelihood": 1–5, "impact": 1–5},
+    "capabilities": AI packages: {"private_data","untrusted_content","external_comms","runs_code","auto_runs"} · websites: {"asks_login","asks_payment","asks_personal","pushes_download","hidden_ai"} · documents: {"has_macros","has_links","asks_data","hidden_ai","mismatch"}  (true/false/null; null for program, archive, download, short, media),
+    "owasp": {"AST01" … "AST10": "pass"|"concern"|"fail"|"na"}  (AI packages only),
+    "red_flags": [{"severity","file","line","quote","quote_meaning":"<Arabic reports: what an English quote says>","why","likelihood","impact","ast"}],
+    "scan_review": [{"n": <number of the scan match, from 1>, "real": true|false, "reason"}],
+    "compat": {"scope":"universal"|"multi"|"specific","summary","tools":{"claude_app","claude_code","chatgpt","codex","gemini","cursor","copilot": "yes"|"adapt"|"no"},"how":{"<tool>":"what has to change"}}  (AI packages only),
+    "good_signs": ["…"],
+    "before_install": [{"step":"<for the person>","ai":"<English instruction for the AI assistant>"}]  (AI packages; other kinds use "before_open"),
+    "couldnt_check": ["…"]
+  }
+}
+```
+Number `scan` matches in the order you list them; `scan_review.n` points to them. The template adds the standard safe-install or safe-opening rules and builds the English prompt itself.
+
 ## Converting for another AI tool (when asked)
 
 If the user wants to use the skill in a tool marked "needs adapting", rewrite it in that tool's own format: ChatGPT custom GPT instructions, `AGENTS.md` (Codex), `GEMINI.md` (Gemini CLI), `.cursor/rules/<name>.mdc` (Cursor), `.github/copilot-instructions.md` (Copilot), or a `SKILL.md` folder (Claude). Keep the purpose and steps; **leave out anything risky** (download-and-run commands, hooks, auto-start servers, requests for secrets, hidden instructions); keep the original credit and license; then list what did not carry over.

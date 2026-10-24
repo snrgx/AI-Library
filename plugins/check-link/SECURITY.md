@@ -1,6 +1,6 @@
 # Security policy
 
-Check Link is a set of instructions (text only). It contains no scripts, hooks or MCP servers. It never installs, runs or downloads what it checks, and it never logs in, types into or submits anything on a page it reads.
+Check Link is a set of instructions plus one visual report template (`skills/check-link/assets/report-template.html`). The template is a static page with a small script that only draws the report from the data inside it: it makes no network requests and installs or runs nothing. There are no other scripts, no hooks and no MCP servers. Check Link never installs, runs or downloads what it checks, and it never logs in, types into or submits anything on a page it reads.
 
 ## Reporting a problem
 
