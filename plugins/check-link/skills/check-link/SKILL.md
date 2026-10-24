@@ -162,7 +162,7 @@ Safe install rules:
 _AI-assisted review by Check Link (Hamidah Rahimi · SNRGX). Not a guarantee. Re-check after every update: a low-risk skill or page can change._
 ```
 
-Quote suspicious lines exactly (short excerpts) so the reader can verify. Always record the commit SHA you reviewed.
+Quote suspicious lines exactly (short excerpts) so the reader can verify. In an Arabic report, write every red flag, explanation and checklist step in Arabic; keep the quote exactly as in the source and add one Arabic line under it saying what it means. Only the install prompt stays in English. Always record the commit SHA you reviewed.
 
 ## Converting for another AI tool (when asked)
 
