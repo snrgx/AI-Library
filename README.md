@@ -16,7 +16,7 @@ Built by **SNRGX**. Every tool is checked with Check Link by its author before r
 
 | Tool | What it does | Status |
 |---|---|---|
-| 🛡️ [**Check Link**](plugins/check-link) | Paste any link and get a **visual** trust check before you install or open it (online version coming soon). AI skills, plugins and MCP servers: score out of 10, likelihood × impact risk rating, OWASP Agentic Skills Top 10, red flags and a safe-install prompt. Websites, documents and short links: look-alike addresses, requests for passwords or cards, hidden AI instructions | [v1.6.0](plugins/check-link/CHANGELOG.md) |
+| 🛡️ [**Check Link**](plugins/check-link) | Paste any link and get a **visual** trust check before you install or open it (online version coming soon). AI skills, plugins and MCP servers: score out of 10, likelihood × impact risk rating, OWASP Agentic Skills Top 10, red flags and a safe-install prompt. Websites, documents and short links: look-alike addresses, requests for passwords or cards, hidden AI instructions<br><br><div dir="rtl" align="right">الصق أي رابط واحصل على تقرير موثوقية <b>مرئي</b> قبل أن تثبّته أو تفتحه (النسخة على الإنترنت قريباً). للمهارات والإضافات وخوادم MCP: تقييم من 10، ومستوى المخاطر (الاحتمال × الأثر)، وقائمة OWASP لأخطر 10 مخاطر في مهارات الذكاء الاصطناعي، وعلامات الخطر، وأمر تثبيت آمن جاهز. وللمواقع والمستندات والروابط المختصرة: كشف العناوين المقلّدة، والصفحات التي تطلب كلمات المرور أو بيانات البطاقات، والتعليمات المخفية الموجهة للذكاء الاصطناعي.</div> | [v1.6.0](plugins/check-link/CHANGELOG.md) |
 
 More tools are on the way.
 
