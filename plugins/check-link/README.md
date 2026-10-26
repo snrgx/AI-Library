@@ -25,7 +25,7 @@ AI skills, plugins and MCP servers are everywhere. Most are helpful. But a skill
 
 **What you get with this plugin:** the skill **and its visual report**. After each check, your AI fills in Check Link's report design and gives you a visual page: score and stars, red-flag counter, risk matrix, what it can do, OWASP tiles, works with, red flags, and the checklist with a ready prompt to copy. Every report comes in **English and Arabic**, with a switch at the top. In the Claude app it opens in the chat; in Claude Code it's saved as an HTML file you open in your browser. A short text summary comes with it.
 
-**Try it online, no install:** the [Check Link page](https://claude.ai/artifact/EkkUzsiWypeoe5tpH7XfFy) does the same check in your browser: paste a link or upload a .zip (link checking needs the Claude desktop app; .zip upload works anywhere in Claude).
+**Coming soon:** Check Link online, in your browser with nothing to install.
 
 ## Install
 
@@ -90,7 +90,7 @@ Found a problem? See [SECURITY.md](SECURITY.md).
 
 **ما تحصل عليه مع هذه الإضافة:** المهارة **مع تقريرها المرئي**. بعد كل فحص، يملأ مساعدك الذكي تصميم تقرير Check Link ويعطيك صفحة مرئية: التقييم والنجوم وعدد علامات الخطر ومصفوفة المخاطر وما الذي تستطيع فعله وقائمة OWASP و«يعمل مع» وعلامات الخطر وقائمة التحقق مع أمر جاهز للنسخ. كل تقرير يأتي **بالعربية والإنجليزية** مع زر للتبديل في الأعلى. في تطبيق Claude يظهر في المحادثة، وفي Claude Code يُحفظ كملف HTML تفتحه في المتصفح، ومعه ملخص نصي قصير.
 
-**جرّبها على الإنترنت دون تثبيت:** [صفحة Check Link](https://claude.ai/artifact/EkkUzsiWypeoe5tpH7XfFy) تجري الفحص نفسه في متصفحك: الصق رابطاً أو ارفع ملف ‎.zip‎ (فحص الروابط يحتاج تطبيق Claude لسطح المكتب، ورفع ‎.zip‎ يعمل في أي مكان في Claude).
+**قريباً:** Check Link على الإنترنت، في متصفحك دون أي تثبيت.
 
 ## طريقة الاستخدام
 

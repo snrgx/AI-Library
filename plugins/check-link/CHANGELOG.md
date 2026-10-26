@@ -4,7 +4,7 @@ All notable changes to Check Link. Format based on [Keep a Changelog](https://ke
 
 **Check Link has two parts.**
 - **Skill** (this plugin): instructions your AI follows. From 1.6.0 it also makes the **visual report** (score, stars, risk matrix, red flags, checklist and prompt) from a template included in the plugin.
-- **Page**: the online version by SNRGX (a Claude artifact): paste a link or upload a .zip and watch the check run, with buttons to convert, translate and download. It isn't installed with the plugin; it's linked from the README.
+- **Page**: an online version by SNRGX where you paste a link or upload a .zip and watch the check run, with buttons to convert, translate and download. It isn't part of the plugin. Public access is coming soon.
 
 Each entry below says which part it applies to. Every version was built on 23–24 Oct 2026. **1.5.0 is the first public release.**
 
@@ -14,7 +14,7 @@ Each entry below says which part it applies to. Every version was built on 23–
 
 **Added**
 - Skill: the **visual report** now comes with the plugin. After each check, the AI fills in `assets/report-template.html` (the same design as the page) and gives you the visual report, always in **both English and Arabic with a switch**: in the Claude app as a page in the chat, in Claude Code as an HTML file. The template only draws the report: no network requests, nothing run.
-- Docs: a link to try the online page without installing.
+- Docs: the online version is announced as coming soon.
 - Skill and page: **link types** (AI package, code project, website, document, short link, download link, program, compressed file, media). Each kind is checked its own way and named at the top of the report.
 - Skill and page: **websites and documents**: look-alike brand addresses (including Kuwaiti banks, telecoms and delivery services), no https, hidden destinations, pages that ask for passwords, codes, card or ID details, pressure, prize bait, download pushes, macros, and hidden instructions aimed at AI assistants. Scores and "what it can do" fit each kind.
 - Skill and page: a **Before you open** checklist and a **safe reading prompt** for any AI assistant.
