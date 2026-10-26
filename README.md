@@ -50,6 +50,28 @@ A visual report in **English and Arabic** (switch at the top): score out of 10 w
 
 Every new tool added to this library appears in the same place. Each tool's own README has more detail.
 
+## Library structure
+
+Each tool has its own folder with all its files. Only the library's shared files sit at the top.
+
+```
+AI-Library/
+├── .claude-plugin/marketplace.json   the catalog: every tool in the library
+├── README.md                         this page: all tools and how to install them
+├── LICENSE · SECURITY.md             rules for the whole library
+├── assets/                           SNRGX logos, shared by all tools
+├── templates/plugin-starter/         the starting shape for a new tool (not installable)
+└── plugins/
+    └── check-link/                   everything for Check Link
+        ├── .claude-plugin/plugin.json   name, version, icon
+        ├── README.md · CHANGELOG.md · LICENSE · SECURITY.md
+        └── skills/check-link/        SKILL.md · references/ · assets/report-template.html
+```
+
+**For users:** add the library once (`/plugin marketplace add snrgx/AI-Library`), then install only the tools you want, each by name: `/plugin install <tool>@snrgx`. Every tool has its own version, version log and release tag (for example `check-link-v1.6.0`), so updating one never changes another.
+
+**For new tools:** see [templates/README.md](templates/README.md).
+
 ## Safety
 
 Every tool in this library is reviewed by its author with **Check Link** before release. This is not an independent audit and not a guarantee. Found a problem? See [SECURITY.md](SECURITY.md).
@@ -81,6 +103,8 @@ Every tool in this library is reviewed by its author with **Check Link** before 
 3. اضغط المجلد ‎`plugins/check-link/skills/check-link`‎ وحده في ملف ‎.zip‎.
 4. في Claude: تخصيص ← المهارات ← + ← رفع مهارة، واختر الملف.
 5. في محادثة جديدة، الصق الرابط واكتب «افحص هذا الرابط». سيصلك التقرير المرئي كملف في المحادثة.
+
+**هيكل المكتبة:** لكل أداة مجلد خاص بها داخل ‎`plugins/`‎ يضم كل ملفاتها، وفي الأعلى فقط ملفات المكتبة المشتركة (الفهرس والصفحة الرئيسية والترخيص والشعارات). تضيف المكتبة مرة واحدة، ثم تثبّت الأدوات التي تريدها فقط، كل أداة باسمها، ولكل أداة إصدارها وسجلها الخاص.
 
 **ما تحصل عليه:** تقرير مرئي **بالعربية والإنجليزية** مع زر للتبديل: تقييم من 10 مع نجوم، ومستوى المخاطر (منخفضة، متوسطة، عالية، ولا نقول «آمن» أبداً)، وعلامات الخطر مع الملف والسطر، ومصفوفة المخاطر، وقائمة OWASP، والأدوات التي يعمل معها، وقائمة «قبل التثبيت» مع أمر جاهز لمساعدك الذكي. لا يتم تثبيت أو تشغيل أو تحميل أي شيء تفحصه.
 

@@ -1,0 +1,14 @@
+{
+  "name": "my-tool",
+  "displayName": "My Tool",
+  "version": "1.0.0",
+  "description": "One sentence: what it does and who it's for. English and Arabic.",
+  "author": {
+    "name": "Hamidah Rahimi (SNRGX)",
+    "url": "https://github.com/snrgx"
+  },
+  "repository": "https://github.com/snrgx/AI-Library",
+  "license": "MIT",
+  "keywords": [],
+  "homepage": "https://github.com/snrgx/AI-Library/tree/main/plugins/my-tool"
+}
