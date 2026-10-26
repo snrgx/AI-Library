@@ -10,7 +10,7 @@ Each entry below says which part it applies to. Every version was built on 23–
 
 ---
 
-## [1.6.0] · 2026-10-24 · Any link, not just AI skills
+## [1.6.0] · 2026-10-26 · Any link, not just AI skills
 
 **Added**
 - Skill: the **visual report** now comes with the plugin. After each check, the AI fills in `assets/report-template.html` (the same design as the page) and gives you the visual report, always in **both English and Arabic with a switch**: in the Claude app as a page in the chat, in Claude Code as an HTML file. The template only draws the report: no network requests, nothing run.
