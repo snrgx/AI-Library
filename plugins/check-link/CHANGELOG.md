@@ -10,7 +10,7 @@ Each entry below says which part it applies to. Every version was built on 23–
 
 ---
 
-## [Unreleased] · Works in more AI tools (Skill)
+## [1.6.1] · 2026-10-27 · Works in more AI tools (Skill)
 
 **Fixed**
 - The skill's header (`description` in SKILL.md) is now valid YAML. Before, skills.sh skipped Check Link because of a colon in the description, so Cursor, Windsurf and other agents couldn't install it. Claude was not affected.
@@ -106,6 +106,7 @@ Each entry below says which part it applies to. Every version was built on 23–
 
 لأداة Check Link جزءان، والأول فقط موجود في هذا المستودع: **المهارة** (تعليمات نصية تكتب التقرير نصاً)، و**الصفحة** (أداة مرئية منفصلة من SNRGX فيها الرسوم والأزرار، وليست ضمن هذه الإضافة).
 
+- **1.6.1:** المهارة: تعمل الآن في أدوات أكثر (Codex وCopilot وGemini CLI وCursor وغيرها) بعد إصلاح ترويسة ملف المهارة، مع خطوات تثبيت مجرّبة لكل أداة في صفحة المكتبة.
 - **1.6.0:** المهارة والصفحة: فحص أي رابط وليس المهارات فقط (المواقع والمستندات والروابط المختصرة وروابط التحميل والبرامج والملفات المضغوطة)، وكشف العناوين المقلّدة والصفحات التي تطلب كلمات المرور أو البطاقات والتعليمات المخفية للذكاء الاصطناعي، مع قائمة «قبل الفتح» وأمر قراءة آمن، وعلامات خطر بالعربية. الصفحة فقط: زر ترجمة التقرير.
 - **1.5.0 (أول إصدار عام):** الاسم الجديد Check Link ضمن مكتبة SNRGX، وشرح كل تطابق في الفحص التلقائي (مؤكد أو إنذار كاذب).
 - **1.4.0:** المهارة والصفحة: «يعمل مع» 7 أدوات ذكاء اصطناعي، وقائمة «قبل التثبيت» مع أمر تثبيت آمن. الصفحة فقط: زر التحويل وتحديد عناصر القائمة.

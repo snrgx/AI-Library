@@ -8,7 +8,7 @@
 
 # SNRGX AI Library
 
-[![Check Link](https://img.shields.io/badge/Check_Link-v1.6.0-FFE14D?labelColor=141414)](plugins/check-link/CHANGELOG.md)
+[![Check Link](https://img.shields.io/badge/Check_Link-v1.6.1-FFE14D?labelColor=141414)](plugins/check-link/CHANGELOG.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-141414)](LICENSE)
 [![English | العربية](https://img.shields.io/badge/English_|_العربية-bilingual-2a9d55)](#arabic)
 
@@ -120,7 +120,7 @@ Replace `<agent>` with your tool (for example `cursor`), or leave out `-a <agent
 
 | Tool | What it does | Version |
 |---|---|---|
-| 🛡️ [**Check Link**](plugins/check-link) | Visual trust check for any link: AI skills, plugins, MCP servers, websites, documents, short links and downloads. | [v1.6.0](plugins/check-link/CHANGELOG.md) |
+| 🛡️ [**Check Link**](plugins/check-link) | Visual trust check for any link: AI skills, plugins, MCP servers, websites, documents, short links and downloads. | [v1.6.1](plugins/check-link/CHANGELOG.md) |
 
 More tools are on the way. Each one gets its own folder, version and install line above.
 

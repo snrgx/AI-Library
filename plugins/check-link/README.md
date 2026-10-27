@@ -56,7 +56,7 @@ Or just ask:
 
 ## Version
 
-Current version: **1.6.0**. See what changed in each version: [CHANGELOG.md](CHANGELOG.md) · [سجل الإصدارات](CHANGELOG.md#ملخص-بالعربية)
+Current version: **1.6.1**. See what changed in each version: [CHANGELOG.md](CHANGELOG.md) · [سجل الإصدارات](CHANGELOG.md#ملخص-بالعربية)
 
 ## Important
 
