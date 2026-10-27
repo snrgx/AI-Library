@@ -29,17 +29,15 @@ AI skills, plugins and MCP servers are everywhere. Most are helpful. But a skill
 
 ## Install
 
-**Claude Code** (as a plugin):
+**Claude Code:**
 ```
 /plugin marketplace add snrgx/AI-Library
 /plugin install check-link@snrgx
 ```
 
-**Stay on a reviewed version:** the plugin commands follow the newest files. For a fixed version, download a release from [Releases](https://github.com/snrgx/AI-Library/releases) (for example `check-link-v1.5.0`) and use that copy, below.
+**Claude app, OpenAI Codex, GitHub Copilot, Gemini CLI, Cursor and other agents:** see the [one-minute setup](../../README.md#install-1-minute-setup) on the library page. Every route is tested and has its own copy-paste lines.
 
-**Claude app** (claude.ai, desktop): download this repo (or a release) as a .zip, take the `plugins/check-link/skills/check-link` folder, zip it, then go to **Customize → Skills → + → Create skill → Upload a skill**.
-
-**Other tools that support Agent Skills:** add `skills/check-link/SKILL.md` the way your tool loads skills.
+**Prefer a reviewed, fixed version?** Every release is tagged (for example `check-link-v1.6.0`) on the [Releases](https://github.com/snrgx/AI-Library/releases) page.
 
 ## Use
 
@@ -91,6 +89,16 @@ Found a problem? See [SECURITY.md](SECURITY.md).
 **ما تحصل عليه مع هذه الإضافة:** المهارة **مع تقريرها المرئي**. بعد كل فحص، يملأ مساعدك الذكي تصميم تقرير Check Link ويعطيك صفحة مرئية: التقييم والنجوم وعدد علامات الخطر ومصفوفة المخاطر وما الذي تستطيع فعله وقائمة OWASP و«يعمل مع» وعلامات الخطر وقائمة التحقق مع أمر جاهز للنسخ. كل تقرير يأتي **بالعربية والإنجليزية** مع زر للتبديل في الأعلى. في تطبيق Claude يظهر في المحادثة، وفي Claude Code يُحفظ كملف HTML تفتحه في المتصفح، ومعه ملخص نصي قصير.
 
 **قريباً:** Check Link على الإنترنت، في متصفحك دون أي تثبيت.
+
+## التثبيت
+
+في Claude Code:
+```
+/plugin marketplace add snrgx/AI-Library
+/plugin install check-link@snrgx
+```
+
+لتطبيق Claude وOpenAI Codex وGitHub Copilot وGemini CLI وCursor وغيرها: راجع [التثبيت في دقيقة](../../README.md#arabic) في صفحة المكتبة، ولكل طريقة أوامر جاهزة للنسخ.
 
 ## طريقة الاستخدام
 

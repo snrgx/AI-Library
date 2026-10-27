@@ -1,6 +1,7 @@
 ---
 name: check-link
-description: Check how risky a link is before you install, open or trust it: AI skills, plugins, MCP servers and marketplace listings, plus websites, documents (PDF, Word, Excel), short links and download links. Use when someone shares a link or .zip and asks "is this safe?", "should I install this?", "should I open this?", "check this link", or wants a trust score. Replies in the user's language (English or Arabic).
+description: >-
+  Check how risky a link is before you install, open or trust it: AI skills, plugins, MCP servers and marketplace listings, plus websites, documents (PDF, Word, Excel), short links and download links. Use when someone shares a link or .zip and asks "is this safe?", "should I install this?", "should I open this?", "check this link", or wants a trust score. Replies in the user's language (English or Arabic).
 ---
 
 # Check Link: trust check for AI skills, plugins and any link

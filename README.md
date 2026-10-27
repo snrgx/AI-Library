@@ -8,58 +8,131 @@
 
 # SNRGX AI Library
 
-Infusing AI into process engineering: visual, bilingual (EN/AR) skills, plugins and MCP tools for founders and creators, with a friendly UI/UX, so anyone can use them.
+[![Check Link](https://img.shields.io/badge/Check_Link-v1.6.0-FFE14D?labelColor=141414)](plugins/check-link/CHANGELOG.md)
+[![License: MIT](https://img.shields.io/badge/license-MIT-141414)](LICENSE)
+[![English | العربية](https://img.shields.io/badge/English_|_العربية-bilingual-2a9d55)](#arabic)
 
-Built by **SNRGX**. Every tool is checked with Check Link by its author before release. That is our own review, not an independent audit: outside reviews are welcome (see [SECURITY.md](SECURITY.md)).
+**Visual, bilingual AI tools for founders and creators.** Each tool turns expert work into a clear page anyone can read, in English and Arabic.
 
-## Tools
+Built by Hamidah Rahimi (**SNRGX**). [العربية ↓](#arabic)
 
-| Tool | What it does | Status |
-|---|---|---|
-| 🛡️ [**Check Link**](plugins/check-link) | Paste any link and get a **visual** trust check before you install or open it (online version coming soon). AI skills, plugins and MCP servers: score out of 10, likelihood × impact risk rating, OWASP Agentic Skills Top 10, red flags and a safe-install prompt. Websites, documents and short links: look-alike addresses, requests for passwords or cards, hidden AI instructions<br><br><div dir="rtl" align="right">الصق أي رابط واحصل على تقرير موثوقية <b>مرئي</b> قبل أن تثبّته أو تفتحه (النسخة على الإنترنت قريباً). للمهارات والإضافات وخوادم MCP: تقييم من 10، ومستوى المخاطر (الاحتمال × الأثر)، وقائمة OWASP لأخطر 10 مخاطر في مهارات الذكاء الاصطناعي، وعلامات الخطر، وأمر تثبيت آمن جاهز. وللمواقع والمستندات والروابط المختصرة: كشف العناوين المقلّدة، والصفحات التي تطلب كلمات المرور أو بيانات البطاقات، والتعليمات المخفية الموجهة للذكاء الاصطناعي.</div> | [v1.6.0](plugins/check-link/CHANGELOG.md) |
+## 🛡️ Check Link
 
-More tools are on the way.
+**Paste a link. See how risky it is, before you install, open or trust it.**
 
-## How to install and use Check Link
+<p align="center"><img src="assets/check-link-preview.png" alt="A Check Link report in English and Arabic: score out of 10 with stars, red-flag counter, details by criteria, works with, and the risk matrix" width="820"></p>
 
-### 1. Claude Code
+It works on AI skills, plugins and MCP servers, and on any other link: websites, documents, short links and downloads. Nothing you check is installed, run or downloaded.
+
+## Install (1-minute setup)
+
+Pick **one** route for each AI tool you use. Installing the same skill two ways gives you two copies.
+
+<details>
+<summary><strong>Claude Code</strong></summary>
+
 ```
 /plugin marketplace add snrgx/AI-Library
 /plugin install check-link@snrgx
 ```
-Then check any link:
-```
-/check-link:check-link https://github.com/owner/repo
-```
-or just ask: *"Check this link before I install it: …"*. You get a short summary in the chat and a visual report saved as `check-link-report-<name>.html`. Open it in your browser.
 
-### 2. Claude app (web, desktop)
+To update: `/plugin marketplace update snrgx`.
+
+</details>
+
+<details>
+<summary><strong>Claude app</strong> (web and desktop)</summary>
+
 1. Turn on **Settings → Capabilities → Code execution and file creation**.
-2. Download this repo (**Code → Download ZIP**, or a release from [Releases](https://github.com/snrgx/AI-Library/releases)) and unzip it.
-3. Zip only the folder `plugins/check-link/skills/check-link`.
-4. In Claude: **Customize → Skills → + → Upload a skill**, and choose that zip.
-5. In a new chat, paste a link and ask *"Check this link"*. The visual report arrives as a file in the chat.
+2. Open the [latest release](https://github.com/snrgx/AI-Library/releases/latest) and download **Source code (zip)**. Keep it zipped.
+3. In Claude: **Customize → Skills → + → Upload a skill**, and choose that zip.
 
-### Coming soon: Check Link online
-Use Check Link in your browser, with nothing to install.
+To update: upload the newer release the same way.
 
-### What you get
-A visual report in **English and Arabic** (switch at the top): score out of 10 with stars, risk level (low, medium, high: never "safe"), red flags with the exact file and line, risk matrix, what it can do, OWASP Agentic Skills Top 10, which AI tools it works with, a **Before you install** checklist and a ready prompt for your AI assistant. Websites, documents and short links get a **Before you open** checklist instead. Nothing you check is ever installed, run or downloaded.
+</details>
 
-**Stay on a reviewed version:** the commands above follow the newest files. For a fixed version, use a release from [Releases](https://github.com/snrgx/AI-Library/releases) (for example `check-link-v1.6.0`).
+<details>
+<summary><strong>OpenAI Codex</strong></summary>
 
-Every new tool added to this library appears in the same place. Each tool's own README has more detail.
+```bash
+codex plugin marketplace add snrgx/AI-Library
+codex plugin add check-link@snrgx
+```
 
-## Library structure
+</details>
 
-Each tool has its own folder with all its files. Only the library's shared files sit at the top.
+<details>
+<summary><strong>GitHub Copilot</strong> (CLI)</summary>
+
+```bash
+copilot plugin marketplace add snrgx/AI-Library
+copilot plugin install check-link@snrgx
+```
+
+</details>
+
+<details>
+<summary><strong>Gemini CLI</strong></summary>
+
+```bash
+gemini skills install https://github.com/snrgx/AI-Library.git --path plugins/check-link/skills
+```
+
+To update: run the same command again.
+
+</details>
+
+<details>
+<summary><strong>Cursor, Windsurf, OpenCode and other agents</strong></summary>
+
+```bash
+npx skills@1.7.4 add snrgx/AI-Library --skill check-link -a <agent>
+```
+
+Replace `<agent>` with your tool (for example `cursor`), or leave out `-a <agent>` to choose from a list. To update: `npx skills@1.7.4 update check-link`.
+
+</details>
+
+**Prefer a reviewed, fixed version?** Every release is tagged (for example `check-link-v1.6.0`) on the [Releases](https://github.com/snrgx/AI-Library/releases) page.
+
+**Coming soon:** Check Link online, in your browser with nothing to install.
+
+## Use it
+
+1. **Paste a link** and ask: *"Check this link before I install it."* In Claude Code you can also type `/check-link:check-link <link>`.
+2. **Read the visual report.** In the Claude app it arrives in the chat; elsewhere it's saved as an HTML file you open in your browser. Switch between English and Arabic at the top.
+3. **Follow the checklist.** Tick the steps you want, then copy the ready prompt to your AI assistant.
+
+## Why Check Link
+
+**A skill is instructions your AI follows.** A plugin can run code on your computer. A bad one can hide instructions, read your passwords or keys, or send your data somewhere. Check Link reads it **without running it** and shows red flags with the exact file and line.
+
+**Links can pretend.** Look-alike addresses, pages that ask for a password or card, short links that hide where they go. Check Link spots them, including look-alikes of Kuwaiti banks and delivery services, and only follows a short link after you agree.
+
+**Security reports are hard to read.** So Check Link gives you a page instead of a wall of text:
+
+- **Score out of 10** with stars, and a **Low / Medium / High** risk level (never "safe": nothing is risk-free)
+- **Risk matrix** (likelihood × impact) and **what it can do**: reads private data, sends data out, runs code
+- **OWASP Agentic Skills Top 10** and **which AI tools it works with**
+- A **Before you install** or **Before you open** checklist with a ready prompt
+
+## All tools
+
+| Tool | What it does | Version |
+|---|---|---|
+| 🛡️ [**Check Link**](plugins/check-link) | Visual trust check for any link: AI skills, plugins, MCP servers, websites, documents, short links and downloads. | [v1.6.0](plugins/check-link/CHANGELOG.md) |
+
+More tools are on the way. Each one gets its own folder, version and install line above.
+
+<details>
+<summary><strong>Library structure</strong> (for builders)</summary>
 
 ```
 AI-Library/
 ├── .claude-plugin/marketplace.json   the catalog: every tool in the library
-├── README.md                         this page: all tools and how to install them
+├── README.md                         this page
 ├── LICENSE · SECURITY.md             rules for the whole library
-├── assets/                           SNRGX logos, shared by all tools
+├── assets/                           SNRGX logos and previews
 ├── templates/plugin-starter/         the starting shape for a new tool (not installable)
 └── plugins/
     └── check-link/                   everything for Check Link
@@ -68,45 +141,138 @@ AI-Library/
         └── skills/check-link/        SKILL.md · references/ · assets/report-template.html
 ```
 
-**For users:** add the library once (`/plugin marketplace add snrgx/AI-Library`), then install only the tools you want, each by name: `/plugin install <tool>@snrgx`. Every tool has its own version, version log and release tag (for example `check-link-v1.6.0`), so updating one never changes another.
+Add the library once, then install only the tools you want, each by name: `<tool>@snrgx`. Every tool has its own version and release tag, so updating one never changes another. To add a tool, see [templates/README.md](templates/README.md).
 
-**For new tools:** see [templates/README.md](templates/README.md).
+</details>
 
 ## Safety
 
-Every tool in this library is reviewed by its author with **Check Link** before release. This is not an independent audit and not a guarantee. Found a problem? See [SECURITY.md](SECURITY.md).
+Every tool here is checked with Check Link by its author before release. That's our own review, not an independent audit or a guarantee. Found a problem? See [SECURITY.md](SECURITY.md).
 
 ---
 
 <div dir="rtl">
 
+<a id="arabic"></a>
+
 ## مكتبة SNRGX للذكاء الاصطناعي
 
-مهارات وإضافات وأدوات MCP من **SNRGX** لروّاد الأعمال وصنّاع المحتوى والفرق، بالعربية والإنجليزية، بلغة بسيطة، وتُفحص كل أداة قبل نشرها.
+**أدوات ذكاء اصطناعي مرئية وثنائية اللغة لروّاد الأعمال وصنّاع المحتوى.** كل أداة تحوّل عمل الخبراء إلى صفحة واضحة يقرؤها أي شخص، بالعربية والإنجليزية.
 
-**الأدوات:** 🛡️ [**Check Link**](plugins/check-link): الصق أي رابط (مهارة أو إضافة أو خادم MCP، أو موقع إلكتروني، أو مستند) واحصل على تقرير موثوقية مرئي قبل التثبيت أو الفتح.
+### 🛡️ Check Link
 
-### طريقة التثبيت والاستخدام
+**الصق الرابط، واعرف مستوى خطورته قبل أن تثبّته أو تفتحه أو تثق به.**
 
-**1. في Claude Code:** اكتب الأمرين:
+يعمل على المهارات والإضافات وخوادم MCP، وعلى أي رابط آخر: المواقع والمستندات والروابط المختصرة وروابط التحميل. لا يتم تثبيت أو تشغيل أو تحميل أي شيء تفحصه.
+
+### التثبيت (دقيقة واحدة)
+
+اختر طريقة **واحدة** لكل أداة ذكاء اصطناعي تستخدمها، فالتثبيت بطريقتين يعطيك نسختين.
+
+<details>
+<summary><strong>Claude Code</strong></summary>
+
+<div dir="ltr">
+
 ```
 /plugin marketplace add snrgx/AI-Library
 /plugin install check-link@snrgx
 ```
-ثم افحص أي رابط بالأمر ‎`/check-link:check-link`‎ متبوعاً بالرابط، أو اطلب ببساطة: «افحص هذا الرابط قبل أن أثبّته». ستحصل على ملخص في المحادثة وتقرير مرئي محفوظ كملف HTML تفتحه في المتصفح.
 
-**2. في تطبيق Claude:**
+</div>
+
+للتحديث: ‎`/plugin marketplace update snrgx`‎
+
+</details>
+
+<details>
+<summary><strong>تطبيق Claude</strong> (الموقع وتطبيق الكمبيوتر)</summary>
+
 1. فعّل «تنفيذ الأكواد وإنشاء الملفات» من الإعدادات ← الإمكانات.
-2. حمّل هذا المستودع (Code ← Download ZIP) وفك ضغطه.
-3. اضغط المجلد ‎`plugins/check-link/skills/check-link`‎ وحده في ملف ‎.zip‎.
-4. في Claude: تخصيص ← المهارات ← + ← رفع مهارة، واختر الملف.
-5. في محادثة جديدة، الصق الرابط واكتب «افحص هذا الرابط». سيصلك التقرير المرئي كملف في المحادثة.
+2. افتح [آخر إصدار](https://github.com/snrgx/AI-Library/releases/latest) وحمّل **Source code (zip)**، واتركه مضغوطاً.
+3. في Claude: تخصيص ← المهارات ← + ← رفع مهارة، واختر الملف.
 
-**هيكل المكتبة:** لكل أداة مجلد خاص بها داخل ‎`plugins/`‎ يضم كل ملفاتها، وفي الأعلى فقط ملفات المكتبة المشتركة (الفهرس والصفحة الرئيسية والترخيص والشعارات). تضيف المكتبة مرة واحدة، ثم تثبّت الأدوات التي تريدها فقط، كل أداة باسمها، ولكل أداة إصدارها وسجلها الخاص.
+للتحديث: ارفع الإصدار الأحدث بالطريقة نفسها.
 
-**قريباً: Check Link على الإنترنت** دون أي تثبيت.
+</details>
 
-**ما تحصل عليه:** تقرير مرئي **بالعربية والإنجليزية** مع زر للتبديل: تقييم من 10 مع نجوم، ومستوى المخاطر (منخفضة، متوسطة، عالية، ولا نقول «آمن» أبداً)، وعلامات الخطر مع الملف والسطر، ومصفوفة المخاطر، وقائمة OWASP، والأدوات التي يعمل معها، وقائمة «قبل التثبيت» مع أمر جاهز لمساعدك الذكي. لا يتم تثبيت أو تشغيل أو تحميل أي شيء تفحصه.
+<details>
+<summary><strong>OpenAI Codex</strong></summary>
+
+<div dir="ltr">
+
+```bash
+codex plugin marketplace add snrgx/AI-Library
+codex plugin add check-link@snrgx
+```
+
+</div>
+</details>
+
+<details>
+<summary><strong>GitHub Copilot</strong></summary>
+
+<div dir="ltr">
+
+```bash
+copilot plugin marketplace add snrgx/AI-Library
+copilot plugin install check-link@snrgx
+```
+
+</div>
+</details>
+
+<details>
+<summary><strong>Gemini CLI</strong></summary>
+
+<div dir="ltr">
+
+```bash
+gemini skills install https://github.com/snrgx/AI-Library.git --path plugins/check-link/skills
+```
+
+</div>
+
+للتحديث: شغّل الأمر نفسه مرة أخرى.
+
+</details>
+
+<details>
+<summary><strong>Cursor وWindsurf وOpenCode وغيرها</strong></summary>
+
+<div dir="ltr">
+
+```bash
+npx skills@1.7.4 add snrgx/AI-Library --skill check-link -a <agent>
+```
+
+</div>
+
+ضع اسم أداتك مكان ‎`<agent>`‎ (مثل ‎`cursor`‎)، أو احذف ‎`-a <agent>`‎ لتختار من قائمة. للتحديث: ‎`npx skills@1.7.4 update check-link`‎
+
+</details>
+
+**تفضّل نسخة ثابتة تمت مراجعتها؟** لكل إصدار وسم خاص (مثل ‎`check-link-v1.6.0`‎) في صفحة [Releases](https://github.com/snrgx/AI-Library/releases).
+
+**قريباً:** Check Link على الإنترنت، في متصفحك دون أي تثبيت.
+
+### طريقة الاستخدام
+
+1. **الصق الرابط** واكتب: «افحص هذا الرابط قبل أن أثبّته».
+2. **اقرأ التقرير المرئي.** في تطبيق Claude يصلك في المحادثة، وفي غيره يُحفظ كملف HTML تفتحه في المتصفح. بدّل بين العربية والإنجليزية من الأعلى.
+3. **اتبع قائمة التحقق.** اختر الخطوات التي تريدها، ثم انسخ الأمر الجاهز إلى مساعدك الذكي.
+
+### لماذا Check Link؟
+
+**المهارة تعليمات ينفّذها مساعدك الذكي،** والإضافة قد تشغّل أكواداً على جهازك. والسيئة منها قد تخفي تعليمات، أو تقرأ كلمات المرور والمفاتيح، أو ترسل بياناتك. Check Link يقرؤها **دون تشغيلها** ويبيّن علامات الخطر مع الملف والسطر.
+
+**الروابط قد تتنكّر:** عناوين مقلّدة، وصفحات تطلب كلمة المرور أو البطاقة، وروابط مختصرة تخفي وجهتها. Check Link يكشفها، ومنها تقليد البنوك وشركات التوصيل في الكويت، ولا يفتح الرابط المختصر إلا بعد موافقتك.
+
+**تقارير الأمان صعبة القراءة،** لذلك يعطيك Check Link صفحة واضحة: تقييم من 10 مع نجوم، ومستوى المخاطر (منخفضة، متوسطة، عالية، ولا نقول «آمن» أبداً)، ومصفوفة المخاطر، وما يستطيع فعله، وقائمة OWASP، والأدوات التي يعمل معها، وقائمة «قبل التثبيت» أو «قبل الفتح» مع أمر جاهز.
+
+### الأمان
+
+تُفحص كل أداة هنا بـ Check Link من قِبل صاحبتها قبل نشرها. هذه مراجعتنا نحن، وليست تدقيقاً مستقلاً ولا ضماناً. وجدت مشكلة؟ راجع [SECURITY.md](SECURITY.md).
 
 </div>
 

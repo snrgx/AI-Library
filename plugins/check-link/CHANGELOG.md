@@ -10,6 +10,19 @@ Each entry below says which part it applies to. Every version was built on 23–
 
 ---
 
+## [Unreleased] · Works in more AI tools (Skill)
+
+**Fixed**
+- The skill's header (`description` in SKILL.md) is now valid YAML. Before, skills.sh skipped Check Link because of a colon in the description, so Cursor, Windsurf and other agents couldn't install it. Claude was not affected.
+
+**Changed**
+- Install steps tested and documented for Claude Code, the Claude app, OpenAI Codex, GitHub Copilot, Gemini CLI and other agents (via skills.sh, with a fixed installer version). They live on the library page, and this README points there.
+- Claude app: upload the release's Source code (zip) as it is; no need to re-zip the skill folder.
+
+**بالعربية:** أصبح Check Link يُثبَّت في أدوات أكثر: Codex وCopilot وGemini CLI وCursor وغيرها، بعد إصلاح ترويسة ملف المهارة. وصارت خطوات التثبيت لكل أداة في صفحة المكتبة.
+
+---
+
 ## [1.6.0] · 2026-10-26 · Any link, not just AI skills
 
 **Added**
